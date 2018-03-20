@@ -25,17 +25,17 @@ p {
 
 #userScoreWrapper{
   display:none;
-  width: 200px;
+  width: 130px;
   background: blue;
   color: #fff;
   padding: 10px;
   margin-left: 85%;
   position: absolute;
-  top: 28%;
+  top: 42%;
   background-color: #5c662f;
   color: #f5cd89;
   font-family: 'Passion One', cursive;
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 12px;
   border: solid 6px #f5cd89;
 }
@@ -47,12 +47,12 @@ hr {
   margin-top: 26.5%;
 }
 #targetNum {
-  width: 100px;
-  height: 100px;
+  width: 57px;
+  height: 58px;
   display:none;
   margin-left: 65%;
   position: absolute;
-  top: 28%;
+  top: 42%;
   padding: 30px;
   background-color: #5c662f;
   color: #f5cd89;
