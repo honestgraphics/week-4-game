@@ -2,9 +2,15 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: black;
+  background-color: #040000;
 }
-
+p {
+  color: rgb(221, 205, 185);
+  font-family: 'Playfair Display', serif;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 1.5%;
+}
 .container {
   background-image: url("../images/DP229797.jpg");
   /* align-content: center; */
@@ -14,39 +20,69 @@ html, body {
   width: 100%;
   height: 100%;
   background-position: top;
-  background-size: cover;
   /* padding-top: 40.82%; */
 }
 
 #userScoreWrapper{
   display:none;
+  width: 200px;
+  background: blue;
+  color: #fff;
+  padding: 10px;
+  margin-left: 85%;
+  position: absolute;
+  top: 28%;
+  background-color: #5c662f;
+  color: #f5cd89;
+  font-family: 'Passion One', cursive;
+  font-size: 40px;
+  border-radius: 12px;
+  border: solid 6px #f5cd89;
+}
+hr {
+  border: solid 4px #f5cd89;
+}
+#crystalDivWrapper {
+  margin-left: 9.5%;
+  margin-top: 26.5%;
 }
 #targetNum {
-  width: 300px;
+  width: 100px;
   height: 100px;
-  background-color: red;
   display:none;
+  margin-left: 65%;
+  position: absolute;
+  top: 28%;
+  padding: 30px;
+  background-color: #5c662f;
+  color: #f5cd89;
+  font-family: 'Passion One', cursive;
+  font-size: 60px;
+  border-radius: 12px;
+  border: solid 6px #f5cd89;
 } 
+.crystalDiv {
+  text-align: center;
+  /* margin-left: 15%; */
+}
 .crystal {
-  width: 16.66%;
-  margin-top: 25%;
-  padding-left: 3%;
-  padding-right: 3%;
+  /* margin-top: 21.5%; */
+  width: 13%;
+  padding-right: 12%;
+  text-align: center;
 }
 #title {
   font-family: 'Passion One', cursive;
   text-align: center;
   font-size: 50px;
-  color: white;
+  color: rgb(228, 218, 207);
   padding-top: 30px;
   padding-bottom: 30px;
 }
 .footer {
   height: 50px;
-  color: white;
-  background-color: black;
-  /* position: fixed;
-  bottom: 0px; */
+  color: rgb(221, 205, 185);
+  background-color: #040000;
   width: 100%;
   text-align: center;
   padding-top: 30px;
@@ -55,7 +91,21 @@ html, body {
 }
 
 #startButton {
-  width: 150px;
-  height: 50px;
-  background-color: tan;
+  width: 300px;
+  height: 100px;
+  background-color: #5c662f;
+  color: #f5cd89;
+  font-family: 'Passion One', cursive;
+  font-size: 60px;
+  position: absolute;
+  bottom: 10%;
+  left: 42%;
+  border-radius: 12px;
+  border: solid 6px #f5cd89;
+  letter-spacing: 4px;
+}
+
+#instructions {
+  letter-spacing: 1px;
+  line-height: 130%;
 }

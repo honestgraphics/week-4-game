@@ -1,6 +1,7 @@
 // set default wins and looses 
 var wins = 0;
 var losses = 0;
+var userScore = 0;
 //setup crystal variables
 var crystal1 = "./assets/images/1.png";
 var crystal2 = "./assets/images/2.png";
@@ -43,26 +44,79 @@ $(document).ready(function(){
       }
     $('#startButton').hide();
     //create target number & assign random number between 1-120
-    var targetNum = Math.floor((Math.random() * 120) + 1);
+    var targetNum = Math.floor((Math.random() * 12) + 1);
     //assign total-score attribute of targetNum var to targetNum id in html
     $('#targetNum').attr('total-score', targetNum);
     $('#targetNum').html(targetNum).show();
     $('#userScoreWrapper').show();
   }
 
+  function reset() {
+
+    $("#crystalDiv").each( function(){
+      var randonCrystalNumber = Math.floor((Math.random() * 12) + 1);
+      $(this).attr('num');
+    });
+   
+    //create target number & assign random number between 1-120
+    var targetNum = Math.floor((Math.random() * 120) + 1);
+    //assign total-score attribute of targetNum var to targetNum id in html
+    $('#targetNum').attr('total-score', targetNum);
+   
+  }
   //call start function for start button click
     $( "#startButton" ).click(function() {
       start();
       });
 
-      $("body").on( '#crystalDiv img', 'click', function() {
-        console.log('clicked image');
-        var userScore = $(this).attr('num');
+      $("body").on( 'click',  '#crystalDiv img', function() {
+        
+        var localUserScore = parseInt($(this).attr('num'));
+        var targetScore = parseInt( $('#targetNum').attr('total-score') );
+
+        userScore = userScore+ localUserScore;
 
         // set current user score
-        $('#userScore span').html( userScore );
+        $('#userScore span#totalScore').html( userScore );
+console.log('target', targetScore);
+        // 
+        if( userScore > targetScore ){
+          console.log('losses');
+          $('#userScore span#result').html( 'You Lose!!!' );
+          losses = losses+1;
+
+          //re-generate user stats
+          generateStats();
+          
+          // reset user score
+          userScore = 0;
+          //reset targetScrore and image  random number
+          reset();
+        }
+        else if( userScore == targetScore ){
+          console.log('wins');
+          $('#userScore span#result').html( 'You Win!!!' );
+          wins = wins+1;
+
+          //re-generate user stats
+          generateStats();
+
+          // reset user score
+          userScore = 0;
+          //reset targetScrore and image  random number
+          reset();
+        }
+        else{
+          console.log('play again');
+        }
+        
 
       });
+
+      function generateStats(){
+        $('#userStats #userWins span').html( wins );
+        $('#userStats #userLosses span').html( losses );
+      }
   //
     
 
